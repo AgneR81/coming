@@ -1,0 +1,495 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    .header {
+        position: fixed;
+        background-color: rgb(241, 156, 76);
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        z-index: 1;
+        .container {
+            width: 1200px;
+            margin-left: calc( 50% - 600px);
+            @media (max-width: $md) {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .header__wrap {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .logo {
+                    width: 200px;
+                    font-style: $medium;
+                    color: bisque;
+                }
+                .nav {
+
+                    width: 250px;
+                    display: flex;
+                    justify-content: space-between;
+                    @media (max-width: $md) {
+                        display: none;
+                    }
+                        a {
+                        width: 80px;
+                        color: black;
+                        font-size: $normal;
+                    }
+                }
+                .burger {
+                    display: none;
+                    // display: inline-block;
+                    color: red;
+                    @media (max-width: $md) {
+                           display: inline-block;                 
+                    }
+                }
+                .burger__meniu {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    .main {
+        width: 100%;
+        height: 100%;
+        background: url('../img/background/beach.img.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;     
+        .main__wrap {
+            width: 100%;
+            padding: 15% 0px 0px 0px;
+            @media (max-width: $md) {
+                padding: 15%;
+            }
+            img {
+                width: 100%;
+                max-width: 80px;
+                margin-left: calc(50% - 40px);
+                @media (max-width: $sm) {
+                    max-width: 50px;
+                    margin-left: calc(50% - 25px);
+                }
+            }
+            h1 {
+                width: 100%;
+                max-width: 400px;
+                font-size: $medium;
+                color: brown;
+                margin-left: calc(50% - 200px);
+                font-weight: bold;
+                text-align: center;
+                padding: 15px 0px;
+                font-family: $font-Raleway;
+                @media (max-width: $sm) {
+                    margin-left: 0px;
+                    font-size: $medium;
+                    padding: 5px 0px;
+                }
+            }
+            p {
+                width: 100%;
+                max-width: 500px;
+                font-size: $small;
+                color: $grey;
+                margin-left: calc(50% - 250px);
+                text-align: center;
+                padding: 15px 0px;
+                @media (max-width: $md) {
+                    padding: 5px 20px;
+                    max-width: 450px;
+                    margin-left: calc(50% - 225px);
+                }
+                @media (max-width: $sm) {
+                    width: 100%;
+                    margin-left: 0%;     
+                }
+            }
+            .time {
+                width: 100%;
+                max-width: 450px;
+                margin-left: calc(50% - 225px);
+                padding: 30px 0px;
+                // font-weight: 900;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                text-shadow: 1px 1px 5px black;
+                @media (max-width: $sm) {
+                    margin-left: 0px;;
+                }
+                .days {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .hours {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .minutes {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                .seconds {
+                    width: 100%;
+                    float: left;
+                    width: calc(100% / 4);
+                }
+                label {
+                    width: 100%;
+                    float: left;
+                    font-family: $font-Raleway;
+                    font-size: $large;
+                    text-align: center;
+                    @media (max-width: $md) {
+                        margin-left: 0px;
+                        font-size: $medium;
+                    }
+                }
+                span {
+                    width: 100%;
+                    float: left;
+                    font-family: $font-Noto-sans;
+                    font-size: $small;
+                    text-align: center;
+                    padding: 5px 0px;
+                    @media (max-width: $md) {
+                        font: $tiny;
+                    }
+                }
+            }
+            .email__form {
+                width: 100%;
+                max-width: 500px;
+                margin-left: calc(50% - 250px);
+                margin-top: 90px;                
+                @media (max-width: $md) {
+                    max-width: 400px;
+                    margin-left: calc(50% - 200px);
+                }
+                @media (max-width: $sm) {
+                    width: 80%;
+                    margin-left: 10%;
+                }
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    border-bottom: 1px solid rgb(238, 238, 238);
+                    text-align: center;
+                    font-size: $small;
+                    padding: 5px 0px;
+                    text-transform: capitalize;
+                    &::placeholder {
+                        color: white;
+                        line-height: 30px;
+                    }
+                }
+                button {
+                    width: 150px;
+                    height: 35px;
+                    margin-left: calc(50% - 75px);
+                    background-color: rgb(206, 144, 50);
+                    color: white;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 2px rgb(69, 69, 69);
+                }
+            }
+            .mouse {
+                margin-top: 80px;
+                width: 30px;
+                height: 50px;
+                border: 1px solid brown;
+                margin-left: calc(50% - 15px);
+                border-radius: 18px;
+                .wheel {
+                    display: inline-block;
+                    width: 3px;
+                    height: 15px;
+                    margin-top: 8px;
+                    background-color: brown;
+                    margin-left: calc(50% - 1.5px);
+                    animation-name: wheel;
+                    animation-duration: 1s;
+                    // animation-delay: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+
+                }
+            }
+            
+            
+        }
+    }    
+
+    .section {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $md) {
+            height: 900px;
+        }
+        .section__wrap {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 70px 0px;
+            .section__left {
+                width: 50%;
+                float: left;
+                @media (max-width: $xl) {
+                    width: 100%;
+                }     
+            }
+            .section__right {
+                width: 50%;
+                float: left;
+                @media (max-width: $xl) {
+                    width: 100%;
+                }
+            }    
+            .left__content,
+            .right__content {
+                width: 92%;
+                margin-left: 4%;
+                .title {    //title
+                    width: 100%;
+                    text-align: left;
+                    font-family: $font-Raleway;
+                    font-size: $normal;
+                    font-weight: 900;
+                    color: black;
+                    text-transform: uppercase;
+                    padding: 10px 0px;
+                }
+                p {                        
+                    font-size: $small;
+                    line-height: 25px;
+                    padding: 10px 0px;
+                    span {
+                        color: rgb(206, 144, 50);
+                    }
+                }
+                form {
+                    width: 100%;                   
+                    margin-top: 45px;
+                    .name {
+                        width: 49%;
+                        float: left;
+                        color: grey;
+                        padding: 5px 0px;
+                        border-bottom: 1px solid grey;
+
+                    }
+                    .email {
+                        width: 49%;
+                        float: right;
+                        color: grey;
+                        padding: 5px 0px;
+                        border-bottom: 1px solid grey;
+                    }
+                    .textarea {
+                        width: 100%;
+                        color: grey;
+                        border-bottom: 1px solid grey;
+                        resize: none;
+                        padding: 10px 0px;
+                        height: 70px;
+
+                    }
+                    button {
+                        margin-top: 30px;
+                        width: 150px;
+                        height: 30px;
+                        float: right;
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        color: white;
+                        background-color: $buttons;
+                        font-weight: normal;
+                        box-shadow: 2px 2px 2px;                    
+                    }
+                }
+                .animation {
+                    margin-top: 50px;
+                    padding: 15px 0px;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    .bar__row{
+                        width: 100%;
+                        height: 40px;
+                        margin: 1px 0px;
+                        position: relative;
+                        font-family: $font-Noto-sans;
+                        font-size: $tiny;
+                        label {
+                            width: 50%;
+                            float: left;
+                        }
+                        span {
+                            width: 50%;
+                            float: right;
+                            text-align: right;                                
+                        }
+                        .row__wrap {
+                            width: 100%;
+                            .line {
+                                position: absolute;
+                                bottom: 8px;
+                                width: 100%;
+                                height: 4px;
+                                background-color: rgb(226, 154, 72);
+                                border-radius: 10px;
+                            }
+                            .active {
+                                @extend .line;
+                                background-color: rgb(161, 207, 245);
+                                animation-name: bars;
+                                animation-duration: 3s;
+                                animation-timing-function: ease-out;
+                                cursor: pointer;
+                                &:hover {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        }
+                    }
+                }
+            }           
+        }
+    }   
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+        background-color: rgb(161, 207, 245);
+        .footer__wrap {
+            width: 100%;
+            // height: 100%;
+            .social {
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                padding: 10px 0px;
+                margin-bottom: 10px;
+                .fa {
+                    width: 40px;
+                    height: 40px;
+                    padding: 7px;
+                    color: brown;
+                    cursor: pointer;
+                    transition: .7s;
+                    &:hover {
+                        border-radius: 10px;
+                        background-color: burlywood;
+                        color: chocolate;
+                        @media (max-width:$md) {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+            hr {
+                width: 100%;
+                height: 2px;
+                border-bottom: 1px solid bisque;
+                background-color: bisque;
+            }
+            .logo {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 5px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                label {
+                    font-size: $medium;
+                    color: rgb(206, 144, 50);
+                    padding-top: 10px;
+                    font-size: $font-Raleway;
+                }
+            }
+            .about {
+                width: 100%;
+                margin-top: 10px;
+                p {
+                    text-align: center;
+                    color: brown;
+                    padding: 6px;
+                    font-size: $small;
+                    @media (max-width: $md) {
+                        font-size: $tiny;
+                        padding: 6px 0px;
+                    }
+                    span {
+                        color: rgb(41, 17, 17);
+                    }
+                }
+            }
+        }
+        .arrow {    
+            position: absolute;
+            top: -35px;
+            right: 40px;
+            width: 50px;
+            height: 50px; 
+            border-radius: 30px;
+            background-color: $buttons;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             a {
+                font-size: $medium;
+                 color: white;
+               // transform: rotate(180deg);
+             }
+        }
+    }
+}
+
+@keyframes bars {
+    0% { 
+        width: 0%;
+        background-color: red;
+    }
+
+    100% {
+        background-color:  green;
+    }
+} 
+
+
+@keyframes wheel {
+    0% { 
+        margin-top: 8px;
+    }
+
+    100% {
+        margin-top: 15px;
+    }
+} 
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: relative;
+    @media (max-width: $md) {
+            width: 98%;
+    }
+}    
